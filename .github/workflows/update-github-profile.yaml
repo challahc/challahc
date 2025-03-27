@@ -28,6 +28,7 @@ jobs:
           python <<EOF
           import requests
           import json
+          import os
 
           # Load data from me.json
           with open("me.json", "r") as file:
