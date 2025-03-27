@@ -21,7 +21,7 @@ readme_content = f"""
 """
 
 # Generate the "Avatars" section
-profile_icons_folder = "profile_icons"
+profile_icons_folder = "profile-icons"
 avatars_section = "## Avatars\n\n"
 
 if os.path.exists(profile_icons_folder):
