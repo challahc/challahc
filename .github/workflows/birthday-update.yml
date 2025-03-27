@@ -35,4 +35,4 @@ jobs:
           AUDREY_BIRTHDATE: ${{ secrets.AUDREY_BIRTHDATE }}
           BRUNO_BIRTHDATE: ${{ secrets.BRUNO_BIRTHDATE }}
           SCOUT_BIRTHDATE: ${{ secrets.SCOUT_BIRTHDATE }}
-        run: python maintenance-scripts/happy-birthday.py
+        run: python maintenance-scripts/happy_birthday.py
