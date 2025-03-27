@@ -2,7 +2,6 @@ name: Update Ages
 
 on:
   schedule:
-    # Run every day at midnight
     - cron: "0 0 1 * *" # Run on the 1st of every month
 
 jobs:
