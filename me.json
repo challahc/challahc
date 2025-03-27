@@ -1,28 +1,28 @@
 {
-  "first_name": "Christopher",
-  "middle_name": "George",
-  "last_name": "Hall",
-  "height": "5'10\"",
-  "weight": "145 lbs",
-  "age": "42",
-  "wife": {
-    "name": "Liz"
-  },
-  "kids": [
-    {
-      "name": "Gwen",
-      "age": 4
+    "first_name": "Christopher",
+    "middle_name": "George",
+    "last_name": "Hall",
+    "height": "5'10\"",
+    "weight": "145 lbs",
+    "age": "42",
+    "wife": {
+        "name": "Liz"
     },
-    {
-      "name": "Freddy",
-        "age": 14
-    },
-    {
-      "name": "Audrey",
-      "age": 19
-    }
-  ],
-  "pets": {
+    "kids": [
+        {
+            "name": "Gwen",
+            "age": "Preschool"
+        },
+        {
+            "name": "Freddy",
+            "age": "High School"
+        },
+        {
+            "name": "Audrey",
+            "age": "Adult"
+        }
+    ],
+    "pets": {
         "dogs": [
             {
                 "name": "Bruno",
