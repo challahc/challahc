@@ -1,0 +1,45 @@
+{
+  "first_name": "Christopher",
+  "middle_name": "George",
+  "last_name": "Hall",
+  "height": "5'10\"",
+  "weight": "145 lbs",
+  "age": "42",
+  "wife": {
+    "name": "Liz"
+  },
+  "kids": [
+    {
+      "name": "Gwen",
+      "age": 4
+    },
+    {
+      "name": "Freddy",
+        "age": 14
+    },
+    {
+      "name": "Audrey",
+      "age": 19
+    }
+  ],
+  "pets": {
+        "dogs": [
+            {
+                "name": "Bruno",
+                "breed": "Chihuahua",
+                "age": 6
+            }
+        ],
+        "cats": [
+            {
+                "name": "Scout",
+                "breed": "Alley Cat",
+                "age": 2
+            }
+        ]
+    },
+    "favorite_color": "green",
+    "favorite_time_of_year": "fall",
+    "favorite_place": "mountains",
+    "favorite_hobby": "biking"
+}

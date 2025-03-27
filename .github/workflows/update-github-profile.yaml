@@ -1,0 +1,63 @@
+name: Update GitHub Profile
+
+on:
+  workflow_dispatch: # Allows manual triggering
+  schedule:
+    - cron: "0 0 1 * *" # Run on the 1st of every month
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # Step 2: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      # Step 3: Run profile update script
+      - name: Run profile update script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python <<EOF
+          import requests
+          import json
+
+          # Load data from me.json
+          with open("me.json", "r") as file:
+              data = json.load(file)
+
+          # Prepare GitHub profile update data
+          profile_data = {
+              "name": f"{data.get('first_name', '')} {data.get('middle_name', '')} {data.get('last_name', '')}".strip(),
+              "bio": f"Favorite Hobby: {data.get('favorite_hobby', '')} | Favorite Place: {data.get('favorite_place', '')}",
+              "location": data.get("favorite_place", ""),
+              "blog": "n/a",  # Replace with your actual blog URL
+              "twitter_username": "n/a"  # Replace with your actual Twitter username
+          }
+
+          # GitHub API endpoint
+          url = "https://api.github.com/user"
+
+          # Headers with authentication
+          headers = {
+              "Authorization": f"Bearer {os.getenv('GITHUB_TOKEN')}",
+              "Accept": "application/vnd.github+json"
+          }
+
+          # Make the PATCH request
+          response = requests.patch(url, headers=headers, json=profile_data)
+
+          # Check the response
+          if response.status_code == 200:
+              print("Profile updated successfully!")
+          else:
+              print(f"Failed to update profile: {response.status_code}")
+              print(response.json())
+          EOF

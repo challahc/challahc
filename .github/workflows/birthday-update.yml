@@ -1,0 +1,38 @@
+name: Update Ages
+
+on:
+  schedule:
+    # Run every day at midnight
+    - cron: "0 0 * * *"
+
+jobs:
+  update-ages:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-dotenv
+
+      # Step 4: Run happy-birthday script
+      - name: Run happy-birthday script
+        env:
+          MY_BIRTHDATE: ${{ secrets.MY_BIRTHDATE }}
+          GWEN_BIRTHDATE: ${{ secrets.GWEN_BIRTHDATE }}
+          FREDDY_BIRTHDATE: ${{ secrets.FREDDY_BIRTHDATE }}
+          AUDREY_BIRTHDATE: ${{ secrets.AUDREY_BIRTHDATE }}
+          BRUNO_BIRTHDATE: ${{ secrets.BRUNO_BIRTHDATE }}
+          SCOUT_BIRTHDATE: ${{ secrets.SCOUT_BIRTHDATE }}
+        run: python maintenance-scripts/happy-birthday.py
