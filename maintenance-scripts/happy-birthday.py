@@ -24,7 +24,7 @@ def get_age_range(age):
     elif 14 <= age <= 18:
         return "High School"
     else:
-        return "Adult"
+        return "Adult" + "(" + str(age) + ")"
 
 # Load the me.json file
 json_file_path = "me.json"
