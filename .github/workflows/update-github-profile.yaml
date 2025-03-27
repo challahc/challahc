@@ -38,9 +38,7 @@ jobs:
           profile_data = {
               "name": f"{data.get('first_name', '')} {data.get('middle_name', '')} {data.get('last_name', '')}".strip(),
               "bio": f"Favorite Hobby: {data.get('favorite_hobby', '')} | Favorite Place: {data.get('favorite_place', '')}",
-              "location": data.get("favorite_place", ""),
-              "blog": "n/a",  # Replace with your actual blog URL
-              "twitter_username": "n/a"  # Replace with your actual Twitter username
+              "location": data.get("favorite_place", "")
           }
 
           # GitHub API endpoint
