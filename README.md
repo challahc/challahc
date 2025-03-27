@@ -7,7 +7,7 @@
 
 ## Avatars
 
-![hall.com.jpeg](profile_icons/hall.com.jpeg)
+![hall.com.jpeg](profile-icons/hall.com.jpeg)
 
-![windows-face.png](profile_icons/windows-face.png)
+![windows-face.png](profile-icons/windows-face.png)
 
