@@ -23,7 +23,7 @@ jobs:
       # Step 3: Run profile update script
       - name: Run profile update script
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           python <<EOF
           import requests
