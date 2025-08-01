@@ -11,7 +11,7 @@
     "kids": [
         {
             "name": "Gwen",
-            "age": "Preschool"
+            "age": "Elementary School"
         },
         {
             "name": "Freddy",
@@ -19,7 +19,7 @@
         },
         {
             "name": "Audrey",
-            "age": "Adult(19)"
+            "age": "Adult(20)"
         }
     ],
     "pets": {
