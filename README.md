@@ -1,7 +1,3 @@
-
-- **Name:** Christopher George Hall
-
-
 ## Avatars
 
 <table>
